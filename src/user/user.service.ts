@@ -5,7 +5,7 @@ import { userDTO } from './dto/user.dto';
 
 @Injectable()
 export class UserService {
-    constructor(@InjectModel('users') private readonly userModel: Model<userDTO>) { } 
+    constructor(@InjectModel('users') private readonly userModel: Model<userDTO>) { }
 
     async findAll() {
         return await this.userModel.find({})
