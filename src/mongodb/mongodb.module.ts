@@ -5,10 +5,12 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UserSchema, VideoSchema } from './schemas';
 
 @Module({
-    imports: [MongooseModule.forFeature([
-        { name: 'users', schema: UserSchema },
-        { name: 'videos', schema: VideoSchema }
-    ])],
+    imports: [
+        MongooseModule.forFeature([
+            { name: 'users', schema: UserSchema },
+            { name: 'videos', schema: VideoSchema }
+        ])
+    ],
     providers: [MongodbService],
     controllers: [MongodbController]
 })

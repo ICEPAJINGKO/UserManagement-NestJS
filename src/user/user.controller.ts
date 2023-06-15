@@ -8,6 +8,6 @@ export class UserController {
 
     @Get()
     async getAllUsers() {
-        return await this.userService.findAll();
+        // return await this.userService.findAll();
     }
 }
